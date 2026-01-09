@@ -18,7 +18,7 @@ jobs:
         run: echo "The answer is ${{ steps.my-action.outputs.answer }}"
 
       - name: Test the container
-        if: ${{ steps.my-action.outputs.answer != 42 }}
+        if: ${{ steps.my-action.outputs.answer != 43 }}
         run: |
           echo "::error file=entrypoint.sh,line4,title=Error in container::The answer was not accepted"
           exit 1
